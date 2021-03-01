@@ -1,0 +1,193 @@
+@import "variables";
+@import "normalize";
+@import "layout";
+@import "fonts";
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 190px;
+    height: 100%;
+    position: fixed;
+    background: $back-color;
+    z-index: 1;
+}
+
+.sidebar a {
+    display: block;
+    color: $font-color;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+
+    &:hover {
+        background: $back-color-hover;
+        color: $font-color-hover;
+        border-left: 3px solid $active-color;
+    }
+}
+
+.sidebar a span {
+    margin: 0 10px;
+}
+
+.activeSidebar {
+    width: 200px;
+    height: 100vh;
+  
+    .sidebar_header{
+      .hand {
+        display: inline-block;
+      }
+  
+      i {
+        padding: 0 15px 5px 0;
+      }
+    }
+  
+    .manager {
+      display: flex;
+    }
+  }
+  
+/* TOP BAR */
+
+.top-bar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: $top-bar-back;
+    z-index: 0;
+}
+
+
+/* MAIN */
+
+main {
+    padding-top: 80px;
+    padding-left: 210px;
+    padding-right: 20px;
+}
+
+main section {
+    background: $page-color;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn {
+    display: block;
+    background-color: $btn-color;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: $bgc;
+    font-family: $paragraph-font;
+    transition: .2s linear;
+  
+    i {
+      color: $bgc;
+    }
+  
+    &:hover {
+      cursor: pointer;
+      background-color: $btn-hover-color;
+    }
+  }
+  
+  .addNew {
+    width: 120px;
+    margin: 25px 0;
+    margin: 25px auto;
+  }
+
+  body {
+    background-color: $bgc;
+  }
+  
+  h2 {
+    color: $header-color;
+    text-transform: uppercase;
+    font-size: $fz-16;
+    font-family: $paragraph-font;
+    font-weight: normal;
+    padding-left: 15px;
+  }
+  
+  h3 {
+    color: $header-color;
+    font-family: $paragraph-font;
+    font-size: 18px;
+  }
+  
+  i {
+    color: $list-text-color;
+    font-size: 20px;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  a {
+    color: $list-text-color;
+    text-decoration: none;
+    font-family: $paragraph-font;
+  }
+  
+  p {
+    font-family: $paragraph-font;
+    color: $paragraph-color;
+  }
+  
+  .p_20{
+    font-size: $fz-20;
+  }
+  
+  
+  .circle {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+  
+  .largeCircle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+  
+  .firstCircleColor {
+    background-color: $first-box-bgc-color;
+  }
+  
+  .secondCircleColor {
+    background-color: $second-box-bgc-color;
+  }
+  
+  .thirdCircleColor {
+    background-color: $third-box-bgc-color;
+  }
+  
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $first-border-color;
+  }
+  
+  .verticalLine {
+    height: 80%;
+    border-left: 1px solid $first-border-color;
+  }
+  
+  input {
+    border: none;
+    font-family: $paragraph-font;
+    color: $header-color;
+    width: 40%;
+  }
