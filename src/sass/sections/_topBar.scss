@@ -1,0 +1,77 @@
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    z-index: 4;
+    border-bottom: 1px solid $first-border-color;
+  
+    .columnBtn {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      color: $main-site-color;
+      align-items: center;
+      height: 100%;
+      background-color: #fff;
+      border-bottom: 0;
+      border-top: 0;
+      border-right: 0;
+      border-left: 1px solid $first-border-color;
+      color: $paragraph-color;
+      font-family: $paragraph-font;
+      font-size: 17px;
+      transition: .2s linear;
+  
+      &:hover {
+        background-color: $bgc;
+        cursor: pointer;
+      }
+    }
+  
+    .colShort {
+      width: 80px;
+    }
+  
+    .colWide {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .topBar {
+      width: 40px;
+      height: calc(100vh - 50px);
+      margin-top: 50px;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-right: 1px solid $first-border-color;
+  
+      .columnBtn {
+        flex-direction: column;
+        width: 40px;
+        border-bottom: 1px solid $first-border-color;
+  
+        span {
+          display: none;
+        }
+  
+        .icon-arrow-down {
+          display: none;
+        }
+      }
+  
+      .colShort{
+        height: 100px;
+      }
+  
+      .colWide {
+        flex-direction: column-reverse;
+        height: 100px;
+      }
+    }
+  }

@@ -1,0 +1,18 @@
+.activeSidebar {
+    width: 200px;
+    height: 100vh;
+  
+    .sidebar_header{
+      .hand {
+        display: inline-block;
+      }
+  
+      i {
+        padding: 0 15px 5px 0;
+      }
+    }
+  
+    .manager {
+      display: flex;
+    }
+  }
