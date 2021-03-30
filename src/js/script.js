@@ -3,7 +3,7 @@
 
 /* Hamburger */
 
-let hamburger = document.querySelector('.fas');
+let hamburger = document.querySelector('.hamburger-btn');
 let sidebar = document.querySelector('.sidebar');
 
 hamburger.addEventListener('click', function () {
@@ -13,10 +13,10 @@ hamburger.addEventListener('click', function () {
 
 /* Canvas */
 
-var ctx = document.getElementById('myChart').getContext('2d');
+const ctx = document.querySelector('#myChart').getContext('2d');
 
 
-var chart = new Chart(ctx, {
+const chart = new Chart(ctx, {
   // 1
   type: 'bar',
   data: {
