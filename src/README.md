@@ -1,0 +1,1 @@
+https://github.com/cleopax/solo-project-1

@@ -1,159 +1,136 @@
 main {
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 250px);
+  margin-left: 225px;
+  padding-top: 80px;
 
-    .container {
-      position: relative;
-      width: calc(100vw - 250px);
-      margin-top: 5px;
-      background-color: $main-site-color;
-      padding-top: 5px;
+section {
+  background: $bgc;
+  margin: 5px, 5px, 5px, 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
-      .dateContainer {
+  h2 {
+    padding-top: 15px;
+  }
+}
+
+  .container {
+    margin-top: 5px;
+    background-color: $main-site-color;
+    padding-top: 5px;
+
+    .dateContainer {
+      display: flex;
+      align-items: center;
+      max-width: 460px;
+      margin: 40px auto;
+
+      .smallDateContainer {
         display: flex;
         align-items: center;
-        width: 460px;
-        margin: 40px auto;
-
-        .smallDateContainer {
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          width: 90%;
-          height: 40px;
-          margin: 50px auto;
-          border: 1px solid $first-border-color;
-          border-radius: 5px;
-        }
+        justify-content: space-around;
+        width: 90%;
+        height: 40px;
+        margin: 50px auto;
+        border: 1px solid $first-border-color;
+        border-radius: 5px;
       }
+    }
 
-      .wrapper{
-        width: 1000px;
-        margin: auto;
+    .wrapper{
+      max-width: 1000px;
+      margin: auto;
 
-        .dataContainer {
+      .dataContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 50px auto;
+
+        .data {
           display: flex;
           justify-content: space-between;
-          flex-wrap: wrap;
-          margin: 50px auto;
+          width: 46%;
+          border-bottom: 1px solid $first-border-color;
 
-          .data {
-            display: flex;
-            justify-content: space-between;
-            width: 46%;
-            border-bottom: 1px solid $first-border-color;
+          p {
+            padding: 10px;
 
-            p {
-              &:first-of-type {
-                font-weight: bold;
-              }
+            &:first-of-type {
+              font-weight: bold;
+            }
 
-              &:last-of-type {
-                color: $number-color;
-              }
+            &:last-of-type {
+              color: $number-color;
             }
           }
         }
+      }
 
-        h3{
-          margin: 55px 0;
-        }
+      h3{
+        margin: 55px 0;
       }
     }
   }
+}
 
+@media (max-width: 600px){
+  main{
 
-  @media (max-width: 1260px) {
-    main .container .wrapper{
-      width: 800px;
-    }
-  }
+    .container {
+      .dateContainer {
+        flex-direction: column;
+        width: 80%;
 
-  @media (max-width: 1260px) and (orientation: landscape) {
-    main .container {
-      width: calc(100vw - 225px);
-    }
-  }
+        .smallDateContainer{
+          margin: 10px 0 10px;
+          flex-direction: column;
+          height: 100px;
+          width: 80%;
 
-  @media (max-width: 1060px){
-    main .container {
-      width: calc(100vw - 245px);
+          input {
+            width: 50%;
+            border: 1px solid $first-border-color;
+          }
+
+          .verticalLine {
+            display: none;
+          }
+        }
+      }
 
       .wrapper{
-        width: 600px;
-      }
-    }
-  }
+        width: 80%;
 
-  @media (max-width: 860px){
-    main .container .wrapper{
-      width: 500px;
-    }
-  }
-
-  @media (max-width: 760px) {
-    main .container {
-      width: calc(100vw - 70px);
-    }
-  }
-
-  @media (max-width: 670px) and (orientation: landscape) {
-    main .container {
-      width: calc(100vw - 90px);
-    }
-  }
-
-  @media (max-width: 600px){
-    main{
-      top: 5px;
-
-      .container {
-        width: calc(100vw - 75px);
-        margin-top: 0;
-
-        .dateContainer {
+        .dataContainer {
           flex-direction: column;
+          align-items: center;
           width: 80%;
+          margin: 25px auto;
 
-          .smallDateContainer{
-            margin: 10px 0 10px;
-            flex-direction: column;
-            height: 100px;
-            width: 80%;
-
-            input {
-              width: 50%;
-              border: 1px solid $first-border-color;
-            }
-
-            .verticalLine {
-              display: none;
-            }
+          .data {
+            width: 90%;
           }
         }
 
-        .wrapper{
+        canvas {
           width: 80%;
-
-          .dataContainer {
-            flex-direction: column;
-            align-items: center;
-            width: 80%;
-            margin: 25px auto;
-
-            .data {
-              width: 90%;
-            }
-          }
-
-          canvas {
-            width: 80%;
-            margin-bottom: 25px;
-          }
+          margin-bottom: 25px;
         }
       }
     }
   }
+}
+
+
+@media (max-width: 758px) {
+  main {
+    margin-left: 0;
+    width: 100%;
+
+    .container {
+      padding: 20px;
+    }
+  }
+}

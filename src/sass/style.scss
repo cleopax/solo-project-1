@@ -34,20 +34,6 @@
 }
 
 
-/* MAIN */
-
-main {
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-main section {
-    background: $bgc;
-    margin: 5px, 5px, 5px, 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
 /* SIDEBAR */
 
   .sidebar li a {
@@ -116,16 +102,6 @@ main section {
   }
 
   /* MAIN */
-  main {
-    padding-left: 210px;
-    padding-right: 20px;
-  }
-
-  main section {
-    background: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
 
   .btn {
     display: block;
@@ -247,7 +223,6 @@ main section {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 1000px;
     border-top: 1px solid #3498db;
   }
 
@@ -258,6 +233,7 @@ main section {
     width: 100%;
     border-bottom: 1px solid #3498db;
     transition: all .2s linear;
+    padding: 10px;
   }
 
   .links .link p {
@@ -295,189 +271,4 @@ main section {
 
   .links .link:hover .iContainer {
     opacity: 1;
-  }
-
-  @media (max-width: 1260px) {
-    .links {
-      width: 800px;
-    }
-  }
-
-  @media (max-width: 1060px) {
-    .links {
-      width: 600px;
-    }
-    .links .link p {
-      width: 25%;
-    }
-    .links .link .linkContainer {
-      width: 35%;
-    }
-    .links .link .iContainer {
-      width: 15%;
-    }
-  }
-
-  @media (max-width: 860px) {
-    .links {
-      width: 500px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .links {
-      width: 100%;
-      margin: auto;
-    }
-    .links .link {
-      flex-direction: column;
-      width: 80%;
-      margin: auto;
-    }
-    .links .link p {
-      width: 80%;
-      text-align: center;
-    }
-    .links .link .linkContainer {
-      width: 80%;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .links .link .iContainer {
-      width: 80%;
-      text-align: center;
-      margin-bottom: 15px;
-      opacity: 1;
-    }
-  }
-
-  main .container .dateContainer {
-    display: flex;
-    align-items: center;
-    width: 460px;
-    margin: 40px auto;
-  }
-
-  main .container .dateContainer .smallDateContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    height: 40px;
-    margin: 50px auto;
-    border: 1px solid #f5f5f2;
-    border-radius: 5px;
-  }
-
-  main .container .wrapper {
-    width: 1000px;
-    margin: auto;
-  }
-
-  main .container .wrapper .dataContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 50px auto;
-  }
-
-  main .container .wrapper .dataContainer .data {
-    display: flex;
-    justify-content: space-between;
-    width: 46%;
-    border-bottom: 1px solid #f5f5f2;
-  }
-
-  main .container .wrapper .dataContainer .data p:first-of-type {
-    font-weight: bold;
-  }
-
-  main .container .wrapper .dataContainer .data p:last-of-type {
-    color: #3498db;
-  }
-
-  main .container .wrapper h3 {
-    margin: 55px 0;
-  }
-
-  @media (max-width: 1260px) {
-    main .container .wrapper {
-      width: 800px;
-    }
-  }
-
-  @media (max-width: 1260px) and (orientation: landscape) {
-    main .container {
-      width: calc(100vw - 225px);
-    }
-  }
-
-  @media (max-width: 1060px) {
-    main .container {
-      width: calc(100vw - 245px);
-    }
-    main .container .wrapper {
-      width: 600px;
-    }
-  }
-
-  @media (max-width: 860px) {
-    main .container .wrapper {
-      width: 500px;
-    }
-  }
-
-  @media (max-width: 760px) {
-    main .container {
-      width: calc(100vw - 70px);
-    }
-  }
-
-  @media (max-width: 670px) and (orientation: landscape) {
-    main .container {
-      width: calc(100vw - 90px);
-    }
-  }
-
-  @media (max-width: 600px) {
-    main {
-      top: 5px;
-    }
-    main .container {
-      width: calc(100vw - 75px);
-      margin-top: 0;
-    }
-    main .container .dateContainer {
-      flex-direction: column;
-      width: 80%;
-    }
-    main .container .dateContainer .smallDateContainer {
-      margin: 10px 0 10px;
-      flex-direction: column;
-      height: 100px;
-      width: 80%;
-    }
-    main .container .dateContainer .smallDateContainer input {
-      width: 50%;
-      border: 1px solid #f5f5f2;
-    }
-    main .container .dateContainer .smallDateContainer .verticalLine {
-      display: none;
-    }
-    main .container .wrapper {
-      width: 80%;
-    }
-    main .container .wrapper .dataContainer {
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      margin: 25px auto;
-    }
-    main .container .wrapper .dataContainer .data {
-      width: 90%;
-    }
-    main .container .wrapper canvas {
-      width: 80%;
-      margin-bottom: 25px;
-    }
   }
